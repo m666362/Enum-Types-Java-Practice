@@ -1,5 +1,7 @@
 package org.richit.enum_types_lib;
 
+import java.util.Calendar;
+
 public class MyClass {
     static String dot = "----------------";
     private static void startProgramme() {
@@ -28,7 +30,7 @@ public class MyClass {
         final int DOG = 0;
         final int CAT = 1;
         final int MOUSE = 2;
-        int animal = 2;
+        int animal = MOUSE;
         switch (animal){
             case DOG:
                 System.out.println("Dog");
@@ -38,6 +40,9 @@ public class MyClass {
                 break;
             case MOUSE:
                 System.out.println("Mouse");
+                break;
+            default:
+                System.out.println("Not found");
                 break;
         }
     }
