@@ -1,0 +1,2 @@
+include ':app', ':enum_types_lib'
+rootProject.name='Enum Types Java Practice'
