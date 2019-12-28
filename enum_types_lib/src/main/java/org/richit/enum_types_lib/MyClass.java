@@ -1,35 +1,45 @@
 package org.richit.enum_types_lib;
 
-import com.sun.org.apache.bcel.internal.generic.BREAKPOINT;
-
-import java.util.Calendar;
+import javax.jws.soap.SOAPBinding;
 
 public class MyClass {
     static String dot = "----------------";
-    private static void startProgramme() {
-        String start = "Programme started";
-        System.out.println();
-        System.out.println(dot+start+dot);
-        System.out.println();
-    }
-    public static void endProgramme(){
 
-        String end = "Programme ended";
+    private static void headingProgram(String heading) {
         System.out.println();
-        System.out.println(dot+end+dot);
+        System.out.println(dot+heading+dot);
         System.out.println();
     }
 
     public static void main(String[] args) {
-        startProgramme();
+        headingProgram("Start Programme");
 
         switchCase();
         enim();
+        randomTest();
+        advanceTest();
 
-        endProgramme();
+        headingProgram("End Programme");
+    }
+
+    private static void advanceTest() {
+        headingProgram( "Advance Test" );
+        Rayhan rayhan = Rayhan.DECENT;
+        System.out.println(rayhan);
+        System.out.println(Rayhan.ENGINEER.getName() + "\t" + Rayhan.DECENT.getName());
+        System.out.println(Rayhan.ENGINEER);
+    }
+
+    private static void randomTest() {
+        headingProgram( "randomTest" );
+        System.out.println(Animal.CAT);
+        System.out.println(Animal.CAT.getClass());
+        System.out.println(Animal.CAT instanceof Animal);
+        System.out.println(Animal.CAT instanceof Enum);
     }
 
     private static void enim() {
+        headingProgram( "Enum" );
         Animal animal = Animal.CAT;
         switch (animal) {
             case DOG:
@@ -49,6 +59,7 @@ public class MyClass {
 
     private static void switchCase() {
 
+        headingProgram( "SwitchCase" );
         final int DOG = 0;
         final int CAT = 1;
         final int MOUSE = 2;

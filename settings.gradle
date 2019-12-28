@@ -1,2 +1,2 @@
-include ':app', ':enum_types_lib'
+include ':app', ':enum_types_lib', ':uri_1120'
 rootProject.name='Enum Types Java Practice'
